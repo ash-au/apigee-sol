@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="SetSessionName">
+    <DisplayName>SetSessionName</DisplayName>
+    <AssignVariable>
+        <Name>gcp.spanner.session</Name>
+        <Ref>gcp.spannersessionname</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

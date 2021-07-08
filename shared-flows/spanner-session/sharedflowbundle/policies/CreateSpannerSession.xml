@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout continueOnError="false" enabled="true" name="CreateSpannerSession" async="false">
+    <DisplayName>CreateSpannerSession</DisplayName>
+    <Request clearPayload="true" variable="sessionRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Headers>
+                <Header name="Authorization">Bearer {private.gcp.access_token}</Header>
+                <Header name="Accept">application/json</Header>
+            </Headers>
+            <Payload>{"session": {"labels": {"env": "test"}}}</Payload>
+        </Set>
+        <Verb>POST</Verb>
+    </Request>
+    <Response>sessionResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://spanner.googleapis.com/v1/{gcp.spannerstring}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

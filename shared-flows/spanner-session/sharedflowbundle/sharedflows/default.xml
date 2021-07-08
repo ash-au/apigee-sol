@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>CheckVariables</Name>
+    </Step>
+    <Step>
+        <Name>InvalidConfig</Name>
+        <Condition>gcp.spanner.error_message != null</Condition>
+    </Step>
+    <Step>
+        <Name>LookupSpannerSession</Name>
+    </Step>
+    <Step>
+        <Name>Get-Current-Session</Name>
+        <Condition>gcp.spanner.session = null</Condition>
+    </Step>
+    <Step>
+        <Name>ExtractGetSession</Name>
+        <Condition>gcp.spanner.session = null</Condition>
+    </Step>
+    <Step>
+        <Name>CreateSpannerSession</Name>
+        <Condition>gcp.spanner.session = null</Condition>
+    </Step>
+    <Step>
+        <Name>ExtractionSession</Name>
+        <Condition>gcp.spanner.session = null</Condition>
+    </Step>
+    <Step>
+        <Name>SetSessionName</Name>
+        <Condition>(gcp.spannersessionname != null) and (gcp.spanner.session = null)</Condition>
+    </Step>
+    <Step>
+        <Name>SetSessionNameArray</Name>
+        <Condition>(gcp.spannersessionarrayname != null) and (gcp.spanner.session = null)</Condition>
+    </Step>
+    <Step>
+        <Name>AddSessiontoCache</Name>
+        <Condition>lookupcache.LookupSpannerSession.cachehit is false</Condition>
+    </Step>
+</SharedFlow>

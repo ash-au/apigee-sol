@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache continueOnError="false" enabled="true" name="AddSessiontoCache">
+    <DisplayName>AddSessiontoCache</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>gcp.spanner</Prefix>
+        <KeyFragment ref="gcp.spannerstring"/>
+    </CacheKey>
+    <CacheResource>gcp-sessions</CacheResource>
+    <Scope>Proxy</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>60</TimeoutInSec>
+    </ExpirySettings>
+    <Source>gcp.spanner.session</Source>
+</PopulateCache>

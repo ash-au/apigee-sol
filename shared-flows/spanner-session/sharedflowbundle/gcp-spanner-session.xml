@@ -1,0 +1,25 @@
+<SharedFlowBundle revision="9" name="gcp-spanner-session">
+    <DisplayName></DisplayName>
+    <Description>Shared flow to get gcp spanner session</Description>
+    <CreatedAt>1625665673391</CreatedAt>
+    <LastModifiedAt>1625666560145</LastModifiedAt>
+    <Policies>
+        <Policy>CheckVariables</Policy>
+        <Policy>InvalidConfig</Policy>
+        <Policy>LookupSpannerSession</Policy>
+        <Policy>AddSessiontoCache</Policy>
+        <Policy>ExtractionSession</Policy>
+        <Policy>SetSessionName</Policy>
+        <Policy>SetSessionNameArray</Policy>
+        <Policy>Get-Current-Session</Policy>
+        <Policy>ExtractGetSession</Policy>
+        <Policy>CreateSpannerSession</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://CheckVariables.js</Resource>
+    </Resources>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+    <subType>SharedFlow</subType>
+</SharedFlowBundle>

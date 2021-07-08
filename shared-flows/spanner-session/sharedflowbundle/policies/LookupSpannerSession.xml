@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache continueOnError="false" enabled="true" name="LookupSpannerSession">
+    <DisplayName>LookupSpannerSession</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>gcp.spanner</Prefix>
+        <KeyFragment ref="gcp.spannerstring"/>
+    </CacheKey>
+    <CacheResource>gcp-sessions</CacheResource>
+    <Scope>Proxy</Scope>
+    <AssignTo>gcp.spanner.session</AssignTo>
+</LookupCache>

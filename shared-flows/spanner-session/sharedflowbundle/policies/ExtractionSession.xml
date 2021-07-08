@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables continueOnError="true" enabled="true" name="ExtractionSession">
+    <DisplayName>ExtractionSession</DisplayName>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="gcp.spannersessionarrayname">
+            <JSONPath>$.sessions[0].name</JSONPath>
+        </Variable>
+        <Variable name="gcp.spannersessionname">
+            <JSONPath>$.name</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">sessionResponse.content</Source>
+</ExtractVariables>
