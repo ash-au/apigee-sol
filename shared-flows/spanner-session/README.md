@@ -10,7 +10,7 @@ Deploy and invoke that shared flow before invoking this shared flow in your API 
 
 2. Also populate variable `gcp.spannerstring` which should follow the same syntax as 
    described [here](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/create) i.e.
-   it should look like this `projects/{apigee.project}/instances/{apigee.instance}/databases/{apigee.db}/sessions`.
+   it should look like this `projects/{gcp.project}/instances/{gcp.instance}/databases/{gcp.db}/sessions`.
    It should look like this in an AssignedMessage policy
    
    ```
