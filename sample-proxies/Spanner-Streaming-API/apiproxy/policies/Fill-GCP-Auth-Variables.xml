@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="Fill-GCP-Auth-Variables">
+    <DisplayName>Fill GCP Auth Variables</DisplayName>
+    <AssignVariable>
+        <Name>private.gcp.service_account.key</Name>
+        <Value>
+PASTE_YOUR_GCP_SERVICE_ACCOUNT_KEY_HERE
+        </Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>gcp.scopes</Name>
+        <Value>https://www.googleapis.com/auth/spanner.data https://www.googleapis.com/auth/cloud-platform</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>gcp.spannerstring</Name>
+        <Template>projects/{apigee.project}/instances/{apigee.instance}/databases/{apigee.db}/sessions</Template>
+    </AssignVariable>
+    <Remove>
+        <QueryParams>
+            <QueryParam name="type"/>
+        </QueryParams>
+    </Remove>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

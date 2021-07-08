@@ -1,0 +1,21 @@
+<APIProxy revision="6" name="a2stream">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1625732915616</CreatedAt>
+    <LastModifiedAt>1625732961476</LastModifiedAt>
+    <BasePaths>/a2ss</BasePaths>
+    <Policies>
+        <Policy>Get-GCP-Credentials</Policy>
+        <Policy>Fill-GCP-Auth-Variables</Policy>
+        <Policy>Get-Spanner-DB-Info</Policy>
+        <Policy>Check-API-Key</Policy>
+        <Policy>SpannerSessionWork</Policy>
+        <Policy>Prepare-Target-Request</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

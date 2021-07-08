@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="Prepare-Target-Request">
+    <DisplayName>Prepare Target Request</DisplayName>
+    <Add>
+        <Headers>
+            <Header name="Authorization">Bearer {private.gcp.access_token}</Header>
+            <Header name="Accept">application/json</Header>
+        </Headers>
+    </Add>
+    <AssignVariable>
+        <Name>target.copy.pathsuffix</Name>
+        <Value>false</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

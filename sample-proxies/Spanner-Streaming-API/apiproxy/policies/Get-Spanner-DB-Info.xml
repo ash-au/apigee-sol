@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables continueOnError="false" enabled="true" name="Get-Spanner-DB-Info">
+    <DisplayName>Get Spanner DB Info</DisplayName>
+    <URIPath>
+        <Pattern ignoreCase="true">/{project}/{instance}/{db}</Pattern>
+    </URIPath>
+    <QueryParam name="type">
+        <Pattern ignoreCase="true">{querytype}</Pattern>
+    </QueryParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>apigee</VariablePrefix>
+</ExtractVariables>
