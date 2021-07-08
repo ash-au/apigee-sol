@@ -2,6 +2,9 @@
 This shared flow can be used to get or create a session to spanner from Apigee.
 This is dependent on Apigee devrel's [Service Account - Authentication Share Flow](https://github.com/ash-au/devrel/tree/main/references/gcp-sa-auth-shared-flow).
 Deploy and invoke that shared flow before invoking this shared flow in your API Proxy.
+In current version all spanner sessions are created with lable `test`.
+TODO: Add filter as input variable
+TODO: Create 1:1 mapping between Apigee App and Spanner Session
 
 ## Shared Flow usage from within an API proxy
 
