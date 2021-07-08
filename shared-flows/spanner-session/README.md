@@ -16,7 +16,7 @@ Deploy and invoke that shared flow before invoking this shared flow in your API 
    ```
     <AssignVariable>
         <Name>gcp.spannerstring</Name>
-        <Template>projects/{apigee.project}/instances/{apigee.instance}/databases/{apigee.db}/sessions</Template>
+        <Template>projects/{gcp.project}/instances/{gcp.instance}/databases/{gcp.db}/sessions</Template>
     </AssignVariable>
    ```
 
