@@ -134,3 +134,10 @@ For now add following to your apigee proxy `HTTPTargetConnection`
             <IgnoreValidationErrors>true</IgnoreValidationErrors>
         </SSLInfo>
 ```
+
+## Other Options in progress
+4. Direct from Apigee to Cloud Run using PSC. Right now PSC endpoints are not accessible from peered VPC network". Once this limitiation has been removed. Will add an option for it.
+5. Apigee to ILB to Cloud Run. ILBs currently do not route to cloud run backends. A solution for this will be added once this feature has been added
+6. Options discussed here are generic enough to deal with any cloud run url. There may be scenarios where different Apigee proxies are required for different cloud run service, possible based on authn/authz requirements. Another solution will need to be considered for that.
+
+Feel free to comment if you have any other solution for this scenario
