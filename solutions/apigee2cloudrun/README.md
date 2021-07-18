@@ -122,7 +122,8 @@ Now in Apigee proxy
 Create one or more VMs and ensure to provide following options
 ```
 export APIGEE_ENDPOINT=10.99.0.2
---metadata ENDPOINT="$APIGEE_ENDPOINT",startup-script-url=gs://apigee-5g-saas/apigee-envoy-proxy-release/latest/conf/startup-script.sh```
+--metadata ENDPOINT="$APIGEE_ENDPOINT",startup-script-url=gs://apigee-5g-saas/apigee-envoy-proxy-release/latest/conf/startup-script.sh
+```
 
 ### Configure Apigee proxy
 Set target server or target url to point to VM. VM will ensure all traffic is routed to PSC which will ensure that traffic is routed to cloud run application based on host header.
