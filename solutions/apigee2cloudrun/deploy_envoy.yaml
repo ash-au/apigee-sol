@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envoy-1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: envoy-1
+  template:
+    metadata:
+      labels:
+        run: envoy-1
+    spec:
+      containers:
+      - name: envoyd
+        image: gcr.io/$PROJCET/envoyd:latest

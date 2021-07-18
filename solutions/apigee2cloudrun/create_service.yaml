@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: envoy-ilb-service
+  annotations:
+    networking.gke.io/load-balancer-type: "Internal"
+  labels:
+    app: envoy-1
+spec:
+  type: LoadBalancer
+  selector:
+    run: envoy-1
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
